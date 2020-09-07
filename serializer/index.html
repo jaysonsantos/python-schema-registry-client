@@ -483,13 +483,12 @@
 
 
 <h4 id="encode-record-with-a-schema">Encode record with a <code>Schema</code></h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">encode_record_with_schema</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">record</span><span class="p">,</span> <span class="n">is_key</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">encode_record_with_schema</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        subject (str): Subject name</span>
 <span class="sd">        schema (avro.schema.RecordSchema): Avro Schema</span>
 <span class="sd">        record (dict): An object to serialize</span>
-<span class="sd">        is_key (bool): If the record is a key</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        bytes: Encoded record with schema ID as bytes</span>
@@ -498,12 +497,11 @@
 
 
 <h4 id="encode-a-record-with-a-schema-id">Encode a record with a <code>schema id</code></h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">encode_record_with_schema_id</span><span class="p">(</span><span class="n">schema_id</span><span class="p">,</span> <span class="n">record</span><span class="p">,</span> <span class="n">is_key</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">encode_record_with_schema_id</span><span class="p">(</span><span class="n">schema_id</span><span class="p">,</span> <span class="n">record</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        schema_id (int): integer ID</span>
 <span class="sd">        record (dict): An object to serialize</span>
-<span class="sd">        is_key (bool): If the record is a key</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        func: decoder function</span>
@@ -512,7 +510,7 @@
 
 
 <h4 id="decode-a-message-encoded-previously">Decode a message encoded previously</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">decode_message</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">is_key</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">decode_message</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        message (str|bytes or None): message key or value to be decoded</span>
